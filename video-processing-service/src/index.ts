@@ -1,8 +1,12 @@
 import express from "express";
-import ffmpeg from "fluent-ffmpeg"
+import ffmpeg from "fluent-ffmpeg";
 
 const app = express();
 app.use(express.json());
+
+const pathToFfmpeg = require("ffmpeg-static");
+
+ffmpeg.setFfmpegPath(pathToFfmpeg);
 
 app.post("/process-video", (req, res) => {
     // Get path of the input file from the request body
