@@ -1,62 +1,65 @@
-import express from "express";
-import { convertVideo, deleteProcessedVideo, deleteRawVideo, downloadRawVideo, setupDirectories, uploadProcessedVideo } from "./storage";
+import express from 'express';
 
+import { 
+  uploadProcessedVideo,
+  downloadRawVideo,
+  deleteRawVideo,
+  deleteProcessedVideo,
+  convertVideo,
+  setupDirectories
+} from './storage';
+
+// Create the local directories for videos
 setupDirectories();
 
 const app = express();
 app.use(express.json());
 
-// const pathToFfmpeg = require("ffmpeg-static");
-// ffmpeg.setFfmpegPath(pathToFfmpeg);
+// Process a video file from Cloud Storage into 360p
+app.post('/process-video', async (req, res) => {
 
-app.post("/process-video", async (req, res) => {
-    // GET bucket AND fileName FROM THE CLOUD PUB/SUB MESSAGE (MESSAGE QUEUE)
-    let data;
-    try {
-        const message = Buffer.from(req.body.message.data, 'base64').toString('utf-8');
-        data = JSON.parse(message);
-        if (!data.name) {
-            throw new Error('Inavalid message payload received.');
-        }
-    } catch (error) {
-        console.error(error);
-        return res.status(400).send('Bad Requesr: missing filename.');
+  // GET bucket AND fileName FROM THE CLOUD PUB/SUB MESSAGE (MESSAGE QUEUE)
+  let data;
+  try {
+    const message = Buffer.from(req.body.message.data, 'base64').toString('utf8');
+    data = JSON.parse(message);
+    if (!data.name) {
+      throw new Error('Invalid message payload received.');
     }
+  } catch (error) {
+    console.error(error);
+    return res.status(400).send('Bad Request: missing filename.');
+  }
 
-    const inputFileName = data.name;
-    const outputFileName = `processed-${inputFileName}`;
+  const inputFileName = data.name;
+  const outputFileName = `processed-${inputFileName}`;
 
-    // DOWNLOAD THE RAW VIDEO FROM CLOUD STORAGE
-    await downloadRawVideo(inputFileName);
+  // DOWNLOAD THE RAW VIDEO FROM CLOUD STORAGE
+  await downloadRawVideo(inputFileName);
 
-    // CONVERT THE VIDEO TO 360P
-    try {
-        convertVideo(inputFileName, outputFileName);
-    } catch (err) { 
-        // parallel await
-        await Promise.all([   
-            deleteRawVideo(inputFileName),
-            deleteProcessedVideo(outputFileName)
-        ]);
-        // series await
-        // await deleteRawVideo(inputFileName);
-        // await deleteProcessedVideo(outputFileName);
-        
-        console.error(err)
-        return res.status(500).send('Internal Server Error: Video Processing Failed');
-    }
-
-    // UPLOAD THE PROCESSED VIDEO TO CLOUD STORAGE
-    await uploadProcessedVideo(outputFileName);
-    await Promise.all([   
-        deleteRawVideo(inputFileName),
-        deleteProcessedVideo(outputFileName)
+  // CONVERT THE VIDEO TO 360P
+  try { 
+    await convertVideo(inputFileName, outputFileName)
+  } catch (err) {
+    await Promise.all([
+      deleteRawVideo(inputFileName),
+      deleteProcessedVideo(outputFileName)
     ]);
+    return res.status(500).send('Processing failed');
+  }
+  
+  // UPLOAD THE PROCESSED VIDEO TO CLOUD STORAGE
+  await uploadProcessedVideo(outputFileName);
 
-    return res.status(200).send('Processing Finished Successfully');
+  await Promise.all([
+    deleteRawVideo(inputFileName),
+    deleteProcessedVideo(outputFileName)
+  ]);
+
+  return res.status(200).send('Processing finished successfully');
 });
 
-const port = process.env.PORT || 3000 //Best practice to use ENV variables. Checks if exists else uses 3000
+const port = process.env.PORT || 3000;  //Best practice to use ENV variables. Checks if exists else uses 3000
 app.listen(port, () => {
-    console.log(`Video Processing Service Listening at http://localhost:${port}`);
+    console.log(`Server is running on port ${port}`);
 });
