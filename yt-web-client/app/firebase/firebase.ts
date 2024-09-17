@@ -13,13 +13,13 @@ import {
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: API_KEY,
+  apiKey: `${process.env.API_KEY}`,
   authDomain: "jr-yt-clone.firebaseapp.com",
   projectId: "jr-yt-clone",
-//   storageBucket: "jr-yt-clone.appspot.com",      // Not Required because using GCS buckets
-//   messagingSenderId: "696746121561",             // Not Required because using GCS Pub/Sub
   appId: "1:696746121561:web:2df206c2266dc83a651448",
   measurementId: "G-1S0HC2DZF7"
+  //   storageBucket: "jr-yt-clone.appspot.com",      // Not Required because using GCS buckets
+  //   messagingSenderId: "696746121561",             // Not Required because using GCS Pub/Sub
 };
 
 // Initialize Firebase
