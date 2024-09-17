@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import styles from "./navbar.module.css";
+import SignIn from "./sign-in";
 
 export default function NavBar() {
     return (
@@ -10,6 +11,7 @@ export default function NavBar() {
                 <Image width={90} height ={20}
                 src="/youtube-logo.svg" alt="YouTube Logo" />
             </Link>
+            <SignIn/>
         </nav>
         
     )
