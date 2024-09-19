@@ -10,16 +10,14 @@ import {
     User
 } from "firebase/auth"
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: `${process.env.FIREBASE_API_KEY}`,
-  authDomain: "jr-yt-clone.firebaseapp.com",
-  projectId: "jr-yt-clone",
-  appId: "1:696746121561:web:2df206c2266dc83a651448",
-  measurementId: "G-1S0HC2DZF7"
-  //   storageBucket: "jr-yt-clone.appspot.com",      // Not Required because using GCS buckets
-  //   messagingSenderId: "696746121561",             // Not Required because using GCS Pub/Sub
+    apiKey: `${process.env.NEXT_PUBLIC_FIREBASE_KEY}`,
+    authDomain: `${process.env.NEXT_PUBLIC_AUTH_DOMAIN}`,
+    projectId: `${process.env.NEXT_PUBLIC_PROJECT_ID}`,
+    storageBucket: `${process.env.NEXT_PUBLIC_STORAGE_BUCKET}`,
+    messagingSenderId: `${process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID}`,
+    appId: `${process.env.NEXT_PUBLIC_FIREBASE_APP_ID}`,
+    measurementId: `${process.env.NEXT_PUBLIC_MEASUREMENT_ID}`
 };
 
 // Initialize Firebase
