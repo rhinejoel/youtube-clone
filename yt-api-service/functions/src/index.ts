@@ -3,7 +3,7 @@ import {initializeApp} from "firebase-admin/app";
 import {Firestore} from "firebase-admin/firestore";
 import * as logger from "firebase-functions/logger";
 import {Storage} from "@google-cloud/storage";
-import {onCall} from "firebase-functions/v2/https";
+import {onCall} from "firebase-functions/https";
 
 initializeApp();
 
