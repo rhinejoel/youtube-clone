@@ -10,6 +10,8 @@ import {
     User
 } from "firebase/auth"
 
+import { getFunctions } from "firebase/functions";
+
 const firebaseConfig = {
     apiKey: `${process.env.NEXT_PUBLIC_FIREBASE_KEY}`,
     authDomain: `${process.env.NEXT_PUBLIC_AUTH_DOMAIN}`,
@@ -22,9 +24,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 
 const auth = getAuth(app);
+export const functions = getFunctions();
 
 /**
  * Signs the user in with a Google popup.
