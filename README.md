@@ -18,7 +18,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<details>
+<details open>
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#built-with">Built With</a></li>
@@ -51,7 +51,6 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Contact
 
 Joel Rhine - joelrhine7@gmail.com
-
 Project Link: [YouTube Clone](https://github.com/rhinejoel/youtube-clone)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
