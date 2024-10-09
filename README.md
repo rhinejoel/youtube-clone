@@ -11,10 +11,10 @@
 <div>
     <div align="center">
       <a href="https://github.com/rhinejoel/youtube-clone">
-        <img src="yt-web-client/public/youtube-logo.svg" alt="Logo" width="80" height="80">
+        <img src="yt-web-client/public/youtube-icon.png" alt="Logo" width="80" height="80">
       </a>
     <h3 align = "center"> YouTube Clone </h3>
-    <p align = "center"> A barebones YouTube clone project! </p>
+    <p align = "center"> A Barebones Full-Stack YouTube Clone Project </p>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -50,7 +50,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Joel Rhine - [Email](joelrhine7@gmail.com)
+Joel Rhine - [Email](mailto:joelrhine7@gmail.com)
 Project Link: [YouTube Clone](https://github.com/rhinejoel/youtube-clone)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -90,4 +90,4 @@ Worked off of NeetCode.io's Full Stack developer course by [Navdeep Singh](https
 [Firebase]: https://img.shields.io/badge/firebase-DD0031?style=for-the-badge&logo=firebase&logoColor=white
 [Firebase-url]: https://firebase.google.com
 [GCS]: https://img.shields.io/badge/GCS-4A4A55?style=for-the-badge&logo=googlecloud&logoColor=FF3E00
-[GCS-url]: https://svelte.dev/
+[GCS-url]: https://cloud.google.com
