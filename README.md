@@ -30,7 +30,7 @@
 
 
 ### Built With
-Used NextJS and TypeScript for the frontend and TypeScript for backend. Stored videos on GCS Storage buckets. Created GCS artifacts using Docker Images and ran Docker Container using Cloud Run. Used GCS Pub/Sub for detecting user uploaded video. Used Firebase Auth for user login and stored user and video metadata in Firestore.
+Used NextJS and TypeScript for the frontend and TypeScript with Express for backend. Stored videos on GCS Storage buckets. Created GCS artifacts using Docker Images and ran Docker Container using Cloud Run. Used GCS Pub/Sub for detecting user uploaded video. Used Firebase Auth for user login and stored user and video metadata in Firestore.
 
 * [![Next][Next.js]][Next-url]
 * [![TypeScript][TypeScript]][TypeScript-url]
