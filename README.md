@@ -39,6 +39,33 @@ Used NextJS and TypeScript for the frontend and TypeScript for backend. Stored v
 * [![GCS][GCS]][GCS-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+## Contact
+
+Joel Rhine - joelrhine7@gmail.com
+
+Project Link: [YouTube Clone](https://github.com/rhinejoel/youtube-clone)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+
+* [NeetCode](https://neetcode.io)
+* [Best README Template](https://github.com/othneildrew/Best-README-Template)
+* [Img Shields](https://shields.io)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
     
 
 <!-- MARKDOWN LINKS & IMAGES -->
