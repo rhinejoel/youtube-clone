@@ -24,10 +24,21 @@
 <br />
 <div align = "center">
     <div align="center">
-      <a href="https://github.com/rhinejoel/youtube-clone.svg">
+      <a href="https://github.com/rhinejoel/youtube-clone">
         <img src="yt-web-client/public/youtube-logo.svg" alt="Logo" width="80" height="80">
       </a>
     <h3 align = "center"> YouTube Clone </h3>
     <p align = "cenetr"> A barebones YouTube clone project! </p>
 <div>
+
+<!-- TABLE OF CONTENTS -->
+<details align="left">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
     
