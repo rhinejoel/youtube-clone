@@ -57,8 +57,7 @@ Project Link: [YouTube Clone](https://github.com/rhinejoel/youtube-clone)
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
-
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Worked off of NeetCode.io's Full Stack developer course by [Navdeep Singh](https://www.linkedin.com/in/navdeep-singh-3aaa14161/)
 
 * [NeetCode](https://neetcode.io)
 * [Best README Template](https://github.com/othneildrew/Best-README-Template)
