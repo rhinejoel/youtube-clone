@@ -40,6 +40,14 @@ Used NextJS and TypeScript for the frontend and TypeScript with Express for back
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Contributors:
+
+<a href="https://github.com/rhinejoel/youtube-clone/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=rhinejoel/youtube-clone" alt="contrib.rocks image" />
+</a>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LICENSE -->
 ## License
 
