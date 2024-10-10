@@ -58,7 +58,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Joel Rhine - [Email](mailto:joelrhine7@gmail.com)
+Joel Rhine: [Email](mailto:joelrhine7@gmail.com)
 Project Link: [YouTube Clone](https://github.com/rhinejoel/youtube-clone)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
